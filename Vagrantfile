@@ -27,7 +27,8 @@ Vagrant.configure("2") do |config|
 
     # Обновляю систему + устанавливаю все нужные штучки
     sudo apt update && sudo apt upgrade
-    sudo apt-get install -y clang python3.10 python3-pip git
+    sudo add-apt-repository -y ppa:deadsnakes/ppa
+    sudo apt-get install -y clang python3.10 python3.12 python3-pip git
     
     # Клонирую репозиторий в домашнюю директорию
     sudo -u test git clone https://github.com/VitSay/Lesta_test.git /home/test/lesta_test
